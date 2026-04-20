@@ -1,0 +1,43 @@
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  padding-block: var(--section-py);
+  position: relative;
+  isolation: isolate;
+}
+
+.section + .section {
+  border-top: 1px solid var(--border);
+}
+
+/* Giant ghost watermark used per section for parallax flavor */
+.ghost-text {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: clamp(10rem, 28vw, 26rem);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 0;
+  will-change: transform;
+}
+
+.ghost-text.filled {
+  color: rgba(139, 92, 246, 0.04);
+  -webkit-text-stroke: 0;
+}
+
+.floating-shape {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+  z-index: 0;
+}
