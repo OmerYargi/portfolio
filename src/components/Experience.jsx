@@ -10,15 +10,16 @@ const experiences = [
     period: '07.2023 — Şu an',
     location: 'İstanbul, TR',
     status: 'Aktif',
-    description:
-      'Yapay zeka tabanlı dinamik fiyatlandırma sistemine sahip akıllı telefon satış platformunu baştan sona geliştirdim. DIA ERP, Ticimax ve Entegra entegrasyonlarını hayata geçirdim.',
+    description: 'Yapay zeka tabanlı dinamik fiyatlandırma sistemine sahip akıllı telefon satış platformunu baştan sona geliştirdim. DIA ERP, Ticimax ve Entegra entegrasyonlarını hayata geçirdim.',
     highlights: [
       'AI tabanlı fiyatlandırma platformu geliştirme',
       'ERP ve e-ticaret entegrasyonları (DIA, Ticimax, Entegra)',
-      'E-ticaret ve kurumsal web siteleri',
+      'E-ticaret web siteleri',
+      'Kamera kayıt sistemleri',
+      'Performans ve responsive odaklı kurumsal web siteleri',
       'Figma ile UI/UX tasarım süreçleri',
     ],
-    stack: ['React', 'Next.js', 'Node.js', 'MongoDB', 'Figma'],
+    stack: ['React', 'Next.js', 'Node.js', 'Express', 'Fastify', 'MongoDB', 'PostgreSQL', 'MariaDB', 'Go Lang', 'Figma'],
   },
   {
     company: 'Ovesis',
@@ -26,13 +27,12 @@ const experiences = [
     period: '09.2023 — 11.2024',
     location: 'İstanbul, TR',
     status: 'Tamamlandı',
-    description:
-      'Three.js tabanlı bir 3D ürün görüntüleme ve konfigürasyon platformu tasarladım ve geliştirdim. Müşterilerin ürünleri özelleştirip kendi sitelerine gömmesine olanak tanıyan gömülebilir bir sistem kurdum.',
+    description: 'Three.js tabanlı bir 3D ürün görüntüleme ve konfigürasyon platformu tasarladım ve geliştirdim. Müşterilerin ürünleri özelleştirip kendi sitelerine gömmesine olanak tanıyan gömülebilir bir sistem kurdum.',
     highlights: [
       '3D ürün konfigüratörü (Three.js)',
       'Embeddable widget mimarisi',
       'Performans ve responsive odaklı kurumsal web siteleri',
-      'Modern UI/UX standartları',
+      'Figma ile UI/UX tasarım süreçleri',
     ],
     stack: ['Three.js', 'React', 'WebGL', 'Node.js', 'PostgreSQL'],
   },
