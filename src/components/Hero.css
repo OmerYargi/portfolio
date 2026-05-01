@@ -306,26 +306,6 @@
   filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.55));
 }
 
-/* Shine sweep across the name */
-.hero-name-shine {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0.35) 50%,
-    rgba(139, 92, 246, 0.25) 60%,
-    rgba(255, 255, 255, 0) 70%,
-    transparent 100%
-  );
-  mix-blend-mode: overlay;
-  will-change: transform;
-  mask-image: linear-gradient(180deg, #000 30%, #000 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(180deg, #000 30%, #000 70%, transparent 100%);
-}
-
 .sr-only {
   position: absolute;
   width: 1px;

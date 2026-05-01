@@ -12,35 +12,31 @@ export default function Hero() {
 
     // Initial state for dramatic entry
     gsap.set('.hero-name .char', {
-      yPercent: 130,
-      rotateX: -80,
-      scale: 0.6,
-      filter: 'blur(14px)',
+      yPercent: 110,
+      rotateX: -60,
+      scale: 0.75,
+      filter: 'blur(8px)',
       transformOrigin: '50% 100% -40px',
-    })
-    gsap.set('.hero-name-shine', {
-      xPercent: -120,
-      skewX: -18,
     })
     gsap.set('.hero-title .word', {
       yPercent: 110,
-      rotate: 4,
-      filter: 'blur(8px)',
+      rotate: 3,
+      filter: 'blur(6px)',
     })
     gsap.set('.hero-title .word.hl', {
       '--hl-fill': '0%',
     })
 
     const tl = gsap.timeline({
-      defaults: { ease: 'power3.out', duration: reduced ? 0 : 0.9 },
-      delay: reduced ? 0 : 0.25,
+      defaults: { ease: 'power3.out', duration: reduced ? 0 : 0.6 },
+      delay: reduced ? 0 : 0.05,
     })
 
     tl.from('.hero-tag', {
-        y: 20,
+        y: 14,
         autoAlpha: 0,
-        filter: 'blur(6px)',
-        duration: 0.7,
+        filter: 'blur(4px)',
+        duration: 0.4,
       })
       .to('.hero-name .char', {
         yPercent: 0,
@@ -48,82 +44,67 @@ export default function Hero() {
         scale: 1,
         filter: 'blur(0px)',
         stagger: {
-          each: 0.04,
+          each: 0.025,
           from: 'start',
         },
-        duration: 1.4,
+        duration: 0.85,
         ease: 'expo.out',
-      }, '-=0.3')
+      }, '-=0.2')
       .to('.hero-name .line:last-child .char:last-child', {
         keyframes: [
-          { scale: 1.25, rotate: -8, duration: 0.25, ease: 'back.out(3)' },
-          { scale: 1, rotate: 0, duration: 0.5, ease: 'elastic.out(1, 0.5)' },
+          { scale: 1.2, rotate: -6, duration: 0.2, ease: 'back.out(3)' },
+          { scale: 1, rotate: 0, duration: 0.4, ease: 'elastic.out(1, 0.5)' },
         ],
-      }, '-=0.3')
-      .to('.hero-name-shine', {
-        xPercent: 220,
-        duration: 1.3,
-        ease: 'power2.inOut',
-      }, '-=0.9')
+      }, '-=0.25')
       .to('.hero-title .word', {
         yPercent: 0,
         rotate: 0,
         filter: 'blur(0px)',
-        stagger: 0.065,
-        duration: 1,
+        stagger: 0.04,
+        duration: 0.65,
         ease: 'expo.out',
-      }, '-=1.0')
+      }, '-=0.7')
       .to('.hero-title .word.hl', {
         '--hl-fill': '100%',
-        duration: 0.9,
-        stagger: 0.15,
-        ease: 'power3.inOut',
-      }, '-=0.7')
-      .from('.hero-desc', {
-        y: 24,
-        autoAlpha: 0,
-        filter: 'blur(6px)',
-        duration: 0.9,
-      }, '-=0.9')
-      .from('.hero-ctas > *', {
-        y: 28,
-        autoAlpha: 0,
-        scale: 0.9,
+        duration: 0.6,
         stagger: 0.1,
-        duration: 0.7,
+        ease: 'power3.inOut',
+      }, '-=0.4')
+      .from('.hero-desc', {
+        y: 18,
+        autoAlpha: 0,
+        filter: 'blur(4px)',
+        duration: 0.55,
+      }, '-=0.55')
+      .from('.hero-ctas > *', {
+        y: 20,
+        autoAlpha: 0,
+        scale: 0.92,
+        stagger: 0.07,
+        duration: 0.5,
         ease: 'back.out(1.6)',
-      }, '-=0.6')
+      }, '-=0.35')
       .from('.hero-meta-item', {
         autoAlpha: 0,
-        y: 18,
-        stagger: 0.1,
-        duration: 0.6,
-      }, '-=0.4')
+        y: 14,
+        stagger: 0.07,
+        duration: 0.4,
+      }, '-=0.3')
       .from('.hero-aside > *', {
         autoAlpha: 0,
-        x: 60,
-        rotateY: -15,
-        stagger: 0.1,
-        duration: 0.9,
+        x: 40,
+        rotateY: -10,
+        stagger: 0.08,
+        duration: 0.65,
         ease: 'power3.out',
-      }, '-=1.2')
+      }, '-=0.9')
       .from('.hero-scroll', {
         autoAlpha: 0,
-        y: -12,
-        duration: 0.5,
-      }, '-=0.2')
+        y: -10,
+        duration: 0.35,
+      }, '-=0.15')
 
     if (!reduced) {
-      // Repeating shine sweep across the name
-      gsap.to('.hero-name-shine', {
-        xPercent: 220,
-        repeat: -1,
-        repeatDelay: 5,
-        duration: 1.8,
-        ease: 'power2.inOut',
-        delay: 3,
-      })
-
       // Idle subtle float on the last accent char (the dot)
       gsap.to('.hero-name .line:last-child .char:last-child', {
         y: -6,
@@ -384,7 +365,6 @@ export default function Hero() {
             <span className="line">
               <span className="line-inner">{splitText('YARGI.')}</span>
             </span>
-            <span className="hero-name-shine" aria-hidden="true" />
           </h1>
 
           <p className="hero-title" aria-label="Modern web deneyimleri tasarlıyor ve geliştiriyorum.">
